@@ -1,0 +1,188 @@
+.modal.fade.in {
+  background: rgba(0, 0, 0, 0.1);
+  color: $gold;
+}
+
+
+.black-modal-skin .modal-body {
+  padding: 0.1rem 5% 2rem;
+}
+
+.black-modal-skin {
+  .modal-body {
+    padding: 0.1rem 5% 2rem;
+    span, .row.md-form {
+      font-size: 1.8rem;
+    }
+  }
+  .modal-dialog {
+    margin-top: 8%;
+    width: 55%;
+    max-width: 1000px;
+    .modal-content {
+      padding: 30px 15px 15px;
+      border: 1px solid $blue;
+      border-radius: 0;
+      color: $orange;
+      background: $black;
+      //@include dialog-bg();
+      .close {
+        background: url("#{$img-path}close.png") no-repeat center center;
+        background-size: 70%;
+        display: block;
+        width: 15px !important;
+        height: 15px !important;
+        opacity: 1;
+        top: 25px;
+        right: 25px;
+      }
+    }
+    p, span{
+      font-size: 1.6rem !important;
+      letter-spacing: 0.02em;
+      line-height: 1.4em;
+    }
+  }
+  .modal-header {
+    border-bottom: none;
+    h4 {
+      margin: 0;
+      color: $mdl-color-white;
+      text-align: center;
+      font-size: 2em;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+
+  }
+  .modal-footer {
+    border-top: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .black-modal-skin .modal-dialog {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1000px) {
+   .black-modal-skin .modal-dialog {
+     width: 65%;
+     font-size: 11px;
+   }
+}
+@media screen and (max-width: 1300px) {
+  .black-modal-skin .modal-dialog .modal-content .close {
+    background-size: 80%;
+  }
+}
+@media screen and (max-width: $tab-size) {
+  .black-modal-skin .modal-dialog {
+    width: 80%;
+  }
+  .black-modal-skin .modal-dialog .modal-content .close {
+    background-size: 100%;
+  }
+  .black-modal-skin .modal-dialog {
+    margin-top: 6%;
+  }
+}
+
+.modal-rules {
+  &.black-modal-skin .modal-dialog .modal-content .close{
+    background: url("#{$img-path}close.png") no-repeat center top;
+    width: 4% !important;
+    height: 30px !important;
+    top: 0;
+    margin-top: -30px;
+    right: -14px;
+  }
+  .modal-dialog {
+    width: 85%;
+    height: 100%;
+    margin: 3% auto 0;
+    max-width: 1980px;
+    img {
+      display: block;
+      width: 100%;
+    }
+    .modal-body{
+      padding: 0;
+    }
+  }
+}
+
+.modal-rules {
+  margin-left: auto;
+  margin-right: auto;
+  &.ruleFor1480 .modal-content {
+    max-width: 1650px;
+  }
+  &.ruleFor1200 .modal-content {
+    max-width: 1330px;
+  }
+  &.ruleFor900 .modal-content {
+    max-width: 1010px;
+  }
+  &.ruleFor600 .modal-content {
+    max-width: 695px;
+  }
+  .modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.body-mobile {
+  .modal-rules {
+    .modal-dialog {
+      margin-top: 0;
+      .modal-content {
+        padding: 20px 15px 15px;
+      }
+    }
+  }
+}
+
+.fun-cover {
+  position: fixed;
+  pointer-events: initial;
+  height: 100vh;
+  width: 100vw;
+  background: url("#{$img-path}congrat_bg.png") no-repeat center center;
+  background-size: contain;
+
+}
+
+@media screen and (max-width: 601px) {
+  .body-mobile .modal-rules .modal-dialog .modal-content {
+    padding: 0;
+    .close, .zoom-ico {
+      margin-top: 0;
+    }
+    .zoom-ico {
+      top: 20px !important;
+    }
+  }
+}
+
+#toast-container {
+  top: 0;
+  .toast{
+    margin: 10vh auto 0;
+  }
+}

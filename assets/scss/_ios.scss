@@ -1,0 +1,38 @@
+body.body-ios {
+  #remotevideo {
+    width: 200%;
+    height: 200%;
+    margin-left: 1%;
+    margin-top: -22%;
+    &.tmp{
+      left: -21%;
+      position: relative;
+      width: 140%;
+      height: 200%;
+      margin-left: 1%;
+      margin-top: -40%;
+    }
+  }
+
+
+  #small-streem-mobile {
+  width: 100%!important;
+  display: block!important;
+  min-height: 90px;
+  position: relative!important;
+  bottom: inherit;
+  left: 0;
+  top: - 0.5%;
+  max-height: 34%;
+    border:1px solid #fff;
+}
+  #small-streem-mobile.IOS-mobi-style video{
+  width: 200% !important;
+  margin-left: -103% !important;
+  margin-top: -40% !important;
+  margin-bottom: -50% !important;
+  height: 220%;
+}
+
+
+}

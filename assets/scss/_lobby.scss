@@ -1,0 +1,64 @@
+.lobby-stream {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  //background-image: url("#{$img-path}lobby_stream.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.stream-preview {
+  cursor: pointer;
+  border: 1px solid $blue;
+  margin: auto;
+  bottom: 9.3%;
+  width: 94%;
+  position: absolute;
+  left: 3%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: $tab-size) {
+  .stream-preview {
+    border-width: 2px;
+  }
+}
+
+.lobby-frames {
+  width: calc(100% - 6.5vw);
+  position: absolute;
+  bottom: 15px;
+  left: 1%;
+  text-align: left;
+}
+
+.frame-tab {
+  background: $black;
+  //width: 10%;
+  margin-left: 1.5%;
+  height: auto;
+  display: inline-block;
+  color: $orange;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.2em;
+  letter-spacing: 1px;
+  padding-bottom: 1%;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:first-child{
+    margin-left: 2.1%;
+  }
+  img {
+    width: calc(100% - 7%);
+    margin: 4% 0 0;
+  }
+  h6{
+    font-size: 0.85rem;
+    color: $white;
+  }
+}

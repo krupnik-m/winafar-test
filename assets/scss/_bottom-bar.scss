@@ -1,0 +1,47 @@
+.app-bottom-bar {
+  width: 100%;
+  height: 20vh;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  @include vertical-gradient (rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  z-index: 100;
+
+  animation: show-buttom-toolbar 1s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+
+
+
+  .btn-in-line {
+    width: 60%;
+    display: block;
+    margin: 3.3% auto 0;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      width: 97% / $col-btn-itm;
+      text-align: center;
+      a {
+        font-size: 1.1em;
+        color: $gold;
+        transition: all 0.3s;
+        img {
+          width: $size-btn-footer;
+          display: block;
+          margin: 0 auto 3px;
+        }
+        &:hover {
+          color: $white
+        }
+      }
+      &.bb-separator {
+        width: 1px;
+        & + li {
+          border-left: 1px solid $gold;
+        }
+      }
+    }
+  }
+}

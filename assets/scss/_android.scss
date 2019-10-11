@@ -1,0 +1,287 @@
+body.body-mobile.body-android {
+  height: calc(100vh + 15px);
+  #html {
+    overflow: auto;
+  }
+}
+
+
+
+.slide-up {
+  display: block;
+  font-size: 4.5rem;
+  text-align: center;
+  width: 100vw !important;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  overflow: auto;
+  .down-arrow {
+    display: none;
+  }
+
+  .up-arrow {
+    position: absolute;
+    width: 100vw;
+    top: 70vh;
+    opacity: 0.6;
+    img {
+      width: 30px;
+    }
+  }
+  #hand {
+    position: absolute;
+    bottom: 0;
+    left: 54vw;
+    opacity: 0;
+    -webkit-animation-name: slideHandUp;
+    animation-name: slideHandUp;
+    animation-duration: 1.9s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    width: 100px;
+  }
+  h4 {
+    font-size: 4rem;
+  }
+}
+
+.body-game{
+  .slide-up{
+    background: #332d5b;
+  }
+}
+.slide-down {
+  .down-arrow {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: 20vh;
+    opacity: 0.6;
+
+    -webkit-animation-name: blinkUp;
+    animation-name: blinkUp;
+    animation-duration: 2.5s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+
+    img {
+      transform: rotate(180deg);
+      width: 30px;
+    }
+  }
+  .up-arrow {
+    -webkit-animation-name: blinkDown;
+    animation-name: blinkDown;
+    animation-duration: 2.5s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+  }
+  #hand {
+    -webkit-animation-name: slideHandDownUp;
+    animation-name: slideHandDownUp;
+    animation-duration: 2.5s;
+  }
+}
+
+
+@-webkit-keyframes slideHandUp {
+  0% {
+    opacity: 0.2;
+    top: 70vh;
+    left: 60vw;
+  }
+  40% {
+    opacity: 1;
+    left: 60vw;
+    top: 70vh;
+  }
+  42% {
+    left: 50vw;
+    top: 80vh;
+  }
+
+  85% {
+    left: 50vw;
+    top: 20vh;
+    opacity: 1;
+  }
+  100% {
+    left: 50vw;
+    top: 20vh;
+    opacity: 0.2;
+  }
+}
+
+@keyframes slideHandUp {
+  0% {
+    opacity: 0.2;
+    top: 70vh;
+    left: 65vw;
+  }
+  40% {
+    opacity: 1;
+    left: 65vw;
+    top: 70vh;
+  }
+  42% {
+    left: 50vw;
+    top: 80vh;
+  }
+
+  85% {
+    left: 50vw;
+    top: 20vh;
+    opacity: 1;
+  }
+  100% {
+    left: 50vw;
+    top: 20vh;
+    opacity: 0.2;
+  }
+}
+
+
+@-webkit-keyframes slideHandDownUp {
+  0% {
+    top: 40vh;
+    left: 65vw;
+    opacity: 0.2;
+  }
+  15% {
+    top: 40vh;
+    left: 65vw;
+    opacity: 1;
+  }
+  20% {
+    left: 50vw;
+    top: 22vh;
+  }
+  30% {
+    left: 50vw;
+    top: 20vh;
+  }
+  65% {
+    left: 50vw;
+    top: 80vh;
+  }
+  80% {
+    left: 50vw;
+    top: 20vh;
+    opacity: 1;
+  }
+  100% {
+    left: 50vw;
+    top: 20vh;
+    opacity: 0.2;
+  }
+}
+
+@keyframes slideHandDownUp {
+  0% {
+    top: 40vh;
+    left: 65vw;
+    opacity: 0.2;
+  }
+  15% {
+    top: 40vh;
+    left: 65vw;
+    opacity: 1;
+  }
+  20% {
+    left: 50vw;
+    top: 22vh;
+  }
+  30% {
+    left: 50vw;
+    top: 20vh;
+  }
+  65% {
+    left: 50vw;
+    top: 80vh;
+  }
+  80% {
+    left: 50vw;
+    top: 20vh;
+    opacity: 1;
+  }
+  100% {
+    left: 50vw;
+    top: 20vh;
+    opacity: 0.2;
+  }
+}
+
+
+@-webkit-keyframes blinkDown {
+  0% {
+    -webkit-transform: translate3d(5%, -95%, 0);
+    transform: translate3d(5%, -95%, 0);
+    opacity: 0.2;
+  }
+  15% {
+    -webkit-transform: translate3d(5%, -95%, 0);
+    transform: translate3d(5%, -95%, 0);
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translate3d(-15%, -115%, 0);
+    transform: translate3d(-15%, -115%, 0);
+  }
+  30% {
+    -webkit-transform: translate3d(-15%, -115%, 0);
+    transform: translate3d(-15%, -115%, 0);
+  }
+  65% {
+    -webkit-transform: translate3d(-15%, 20%, 0);
+    transform: translate3d(-15%, 20%, 0);
+  }
+  80% {
+    -webkit-transform: translate3d(-15%, -105%, 0);
+    transform: translate3d(-15%, -105%, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(-15%, -105%, 0);
+    transform: translate3d(-15%, -105%, 0);
+    opacity: 0.2;
+  }
+}
+
+@keyframes blinkDown {
+  0% {
+    opacity: 0.1;
+  }
+  63% {
+    opacity: 0.65;
+  }
+  65% {
+    opacity: 0.65;
+  }
+  95% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+
+@keyframes blinkUp {
+  0% {
+    opacity: 0.6;
+  }
+  53% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}

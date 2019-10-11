@@ -1,0 +1,39 @@
+#stream {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-height: $min-height;
+}
+#wrapper{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-height: $min-height;
+  min-width: $min-body-width;
+  overflow: hidden;
+}
+
+.view-all-streams #wrapper {
+  position: fixed;
+  overflow: scroll;
+ }
+.test-page {
+  #html {
+    position: inherit !important;
+    top: 0 !important;
+  }
+  h3 {
+    text-align: center;
+  }
+  .rotate-overlay{
+    display: none !important;
+  }
+}
+
+

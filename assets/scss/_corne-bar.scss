@@ -1,0 +1,75 @@
+/*.app-corne-bar {
+  position: absolute;
+  display: block;
+  box-shadow: 0 0 0 5px $gold-bg;
+  border: 3px solid #000;
+  width: $diametr-corne-bar;
+  height: $diametr-corne-bar;
+  left: $cb-left;
+  bottom: $cb-bottom;
+  @include corne-bar-gradient($cb-col1, $cb-col2, $cb-col3);
+  background: linear-gradient(145deg, #fff 1%, #352C65 28.001%, #130836 37%, #130836 50%, #352C65 64.001%, #fff 99%);
+  border-radius: 50%;
+  z-index: 200;
+}
+
+.corne-info {
+  left: calc(#{$corne-left-offset} + 6%);
+  top: 14%;
+  display: block;
+  z-index: 205;
+  position: absolute;
+  height: 100%;
+  width: calc(100% - #{$corne-left-offset} - 6%);
+
+  p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+  }
+  .current-cash {
+    padding-top: 5%;
+    font-size: 1.9em;
+    color: $cb-col-text;
+    line-height: 2.3em;
+  }
+  .current-username {
+    color: $white;
+    font-size: 1.2em;
+    line-height: 1em;
+
+  }
+}
+
+.corne-star {
+  width: 25%;
+  height: 25%;
+  display: block;
+  border-radius: 50%;
+  left: $corne-left-offset;
+  top: -5%;
+  background: $cb-col1;
+  position: absolute;
+  z-index: 202;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  img {
+    width: 70%;
+    height: 70%;
+    display: block;
+    margin: 15%;
+  }
+}
+
+.animate-btns{
+  animation: show-buttons-around 1s;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}
+
+// buttons by arround
+
+
+*/

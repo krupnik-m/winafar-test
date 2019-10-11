@@ -1,0 +1,28 @@
+@mixin transform($content)
+{
+  transform: $content;
+  -webkit-transform: $content;
+  -moz-transform: $content;
+  -o-transform: $content;
+  -ms-transform: $content;
+}
+
+@mixin transform-origin($origin-x, $origin-y) {
+  -webkit-transform-origin: $origin-x $origin-y;
+  -moz-transform-origin: $origin-x $origin-y;
+  -o-transform-origin: $origin-x $origin-y;
+  -ms-transform-origin: $origin-x $origin-y;
+  transform-origin: $origin-x $origin-y;
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $size $color;
+    -moz-box-shadow:inset $top $left $blur $size $color;
+    box-shadow:inset $top $left $blur $size $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $size $color;
+    -moz-box-shadow: $top $left $blur $size $color;
+    box-shadow: $top $left $blur $size $color;
+  }
+}

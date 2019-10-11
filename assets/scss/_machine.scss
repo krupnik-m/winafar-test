@@ -1,0 +1,433 @@
+.notice-fun-mode{
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 60px;
+  z-index: 1;
+  background: #00000090;
+  color: #f5bb42;
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.machine-view {
+  width: calc(100% - 18.5% - 8.04%);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 8.04% 0 18.5%;
+  border: 3px solid $navy;
+}
+
+#machine-wrapper {
+ // display: none;
+}
+
+.machine-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+
+  video,
+  #remotevideo {
+    width: 150%;
+    margin-left: -35%;
+  }
+  img {
+    height: 100vh;
+    margin: 0 auto;
+    display: block;
+  }
+  #streem {
+    width: 100%;
+  }
+  #machines-pic {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .live-btn {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    &:hover {
+      @include bg-radial(rgba(255, 255, 255, 0.3), 0%, transparent, 50%);
+    }
+  }
+  .tooltip-inner {
+    @include mix-boxshadow(1px, 1px, 25px, rgba(255, 255, 255, 0.9));
+    background: rgba(15, 11, 49, 0.73);
+    font-size: 20px;
+    color: $gold-text;
+    &:before {
+      border-top-color: #0F0B31;
+      opacity: 0.75;
+    }
+  }
+
+}
+
+.machine-wrapper #machines-pic{
+  pointer-events: none;
+  .live-btn{
+    pointer-events: initial;
+  }
+}
+
+
+.body-mobile .machine-wrapper #machines-pic{
+  display: none !important;
+}
+#remotevideo {
+  width: 138%;
+  margin-left: -19%;
+}
+
+#i-stream>#remotevideo{
+  width: 251%;
+  margin-left: -19%;
+  height: 50%;
+}
+
+.machines-toolbar {
+  width: 50%;
+  height: auto !important;
+  position: absolute;
+}
+#small-mobile-streem{
+  display: none;
+}
+  .body-mobile.body-game {
+
+
+    .stream-preview{
+      border: none;
+      box-shadow: none;
+      video{
+        border:1px solid $blue;
+        -webkit-box-shadow: 1px 1px 15px #000;
+        box-shadow: 1px 1px 15px #000;
+      }
+    }
+
+    #small-mobile-streem{
+      display: block;
+      margin: 0;
+      width: 70px;
+      height: 45px;
+    }
+    .main-nav-right {
+      height: 100%;
+    }
+    .machine-view {
+      margin: 0 25% 0 0;
+    }
+    .app-side-bar {
+      width: 70px;
+      height: 45px;
+      background: transparent;
+      z-index: 1;
+      display: none;
+      #control_sidebar_size{
+        display: none;
+      }
+
+    }
+    .app-top-bar {
+      width: 27%;
+      z-index: 0;
+      padding: 2% 5px 0;
+    }
+    .v-topbar-item {
+      width: 96%;
+      margin: 0 2% 9%;
+      position: relative;
+      text-align: center;
+
+       }
+    .v-topbar-item.btn-block {
+      height: 65px;
+      margin-left:4%;
+      margin-right:4%;
+      max-width: inherit;
+      background: transparent;
+    }
+    .user-name {
+      text-align: left;
+      padding-left: 5px;
+    }
+    .mobile-logo {
+      width: 80%;
+    }
+    .watch{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      text-align: center;
+      max-width: inherit;
+      height: 30px;
+      margin-bottom: 5%;
+      i {
+        width: 20px;
+        position: absolute;
+        left: 8px;
+      }
+      span{
+        line-height: 31px;
+        font-size: 1.6rem;
+        text-align: center;
+        margin-left: 10px;
+      }
+    }
+    .side-cash-out {
+      background: $darknavy;
+      text-align: center;
+      top: 0;
+      span{
+        left:0;
+      }
+      img {
+        height: 63px;
+        width: auto;
+      }
+    }
+
+    .btnmixer, .btn-tutorial, .user-name {
+      background-color: $purple;
+    }
+    .btnmixer, .btn-tutorial {
+      border: 2px solid $purple;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .autoplay, .spin {
+      width: 50%;
+      height: 21%;
+      margin: 5px 0 0;
+      position: absolute;
+      display: inline-block;
+      bottom: 13.5%;
+    }
+    .spin {
+      right: 0;
+      left: inherit;
+    }
+    .btn-btm-block {
+      padding-top: 1%;
+      margin: 0;
+     // background: $darknavy;
+      width: calc(100% + 10px);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 15%;
+      img {
+        width: 100%;
+      }
+      .fl-l {
+        width: 60%;
+      }
+      .fl-r {
+        width: 34%;
+        right: 1.5%;
+        bottom: 0%;
+        left: initial;
+      }
+    }
+
+    .mobile-game-bar {
+      display: block;
+      width: 100%;
+      position: absolute;
+      z-index: 20;
+      bottom: 0;
+      height: 44vh;
+      padding: 5vh 0 0;
+      @include mix-boxshadow(1px, 0px, 10px, #000);
+      background-color: rgba(53, 44, 101, 0.7);
+      text-align: center;
+      .mobi-pnl-wrapper{
+        position: relative;
+        width: 95%;
+        height: 86%;
+        margin-left: 2.5%;
+      }
+      .close-bbar{
+        background: url("#{$img-path}close_yellow.png") no-repeat center center;
+        background-size: 78%;
+        display: block;
+        width: 20px !important;
+        height: 20px !important;
+        top: 0;
+        right: 0;
+        position: absolute;
+        color: #fff;
+      }
+      .moby-btn {
+        @include purple-orange(0.6, 210deg);
+        border: 1px solid #fff;
+        border-radius: 15px;
+        width: 14vw;
+        height: 15vh;
+        display: block;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        position: absolute;
+        span {
+          font-size: 2rem;
+          font-weight: bold;
+          line-height: 14vh;
+        }
+      }
+    }
+  }
+/*
+.fun_mode {
+  position: absolute;
+  top: 2%;
+  right: 10%;
+  z-index: 0;
+  width: 15%;
+  animation: beat 6s infinite alternate;
+  transform-origin: center;
+}
+.free_rounds {
+  position: absolute;
+  top: 0%;
+  right: 8%;
+  z-index: 0;
+  width: 19%;
+  -webkit-animation: beat 6s infinite alternate;
+  animation: beat 6s infinite alternate;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}*/
+.body-mobile .free_rounds,
+.body-mobile .fun_mode {
+  right: 30%;
+}
+@keyframes beat {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  20% {
+
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+
+  40% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+
+
+.body-game{
+  .side-item{
+    width: 96%;
+    //position: initial;
+    margin: 0 auto 1%;
+  }
+  .side-username{
+    background: $purple;
+    color: $orange;
+    line-height: 1.8em;
+    padding: 0 6px;
+  }
+  .side-cash-out{
+    display: block;
+    position: absolute;
+    left: 2%;
+    top: 30%;
+    span{
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: -4%;
+      font-size: 1.4rem;
+      letter-spacing: 0.03em;
+      text-shadow: 0 1px 1px #000;
+      font-weight: 600;
+    }
+    &.w-70 span{
+      left: 0;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
+.body-mobile.body-game {
+  .side-item {
+    width: 100%;
+  }
+}
+
+#small-streem.IOS-itab-style{
+  border: none !important;
+  box-shadow: none !important;
+/*  width: 80%;
+  overflow: hidden;
+  left:0;
+  canvas {
+    width: 120%;
+  }*/
+
+}
+#small-streem-mobile.IOS-mobi-style{
+  overflow: hidden;
+  left:0;
+  video {
+  border: none;
+  box-shadow: none;
+  width: 150% !important;
+  background: transparent;
+}}
+video {
+  .click-me {
+    display: block;
+    width: 500Px;
+    height: 500px;
+    top: 0;
+    left: 0;
+    background: #0D47A1;
+    color: yellow;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 15%;
+    position: absolute;
+    z-index: 10000000;
+  }
+}
+
+#small-streem-mobile{
+  width: 100% !important;
+  display: block !important;
+  min-height: 90px;
+  position: relative !important;
+  bottom: inherit;
+  left:0;
+}
+
+.ios-style-video{
+  width:177% !important;
+ /* margin-left: -60% !important;
+  margin-bottom: -59% !important;
+  margin-top: -51% !important;*/
+  min-height: 22%;
+}
+
+
+

@@ -1,0 +1,226 @@
+/*@mixin tips-gradient($color1,$color2,$color3) {
+  background: -webkit-gradient($deg-of-bg, $color1 33%, $color2 33.001%, $color2 66%, $color3 66.001%);
+  background: -moz-linear-gradient($deg-of-bg, $color1 33%, $color2 33.001%, $color2 66%, $color3 66.001%);
+  background: linear-gradient($deg-of-bg, $color1 33%, $color2 33.001%, $color2 66%, $color3 66.001%);
+//}*/ ////
+
+@mixin purple-orange($trnsp, $deg) {
+  background: -webkit-gradient($deg, rgba(53, 44, 101, $trnsp) 50%, rgba(245, 189, 71, $trnsp) 100%);
+  background: -moz-linear-gradient($deg, rgba(53, 44, 101, $trnsp) 50%, rgba(245, 189, 71, $trnsp) 100%);
+  background: linear-gradient($deg, rgba(53, 44, 101, $trnsp) 50%, rgba(245, 189, 71, $trnsp) 100%);
+}
+/*
+@mixin dialog-bg() {
+
+  background: -webkit-gradient(0deg, rgba(53, 44, 101, 0.9) 40%, rgba(245, 189, 71, 0.9) 100%);
+  background: -moz-linear-gradient(0deg, rgba(53, 44, 101, 0.9) 40%, rgba(245, 189, 71, 0.9) 100%);
+  background: linear-gradient(0deg, rgba(53, 44, 101, 0.9) 40%, rgba(245, 189, 71, 0.9) 100%);
+}
+*/
+@mixin button-bg() {
+  background: -webkit-gradient(0deg, rgba(53, 44, 101, 0.9) 40%, rgba(245, 189, 71, 0.7) 100%);
+  background: -moz-linear-gradient(0deg, rgba(53, 44, 101, 0.9) 40%, rgba(245, 189, 71, 0.7) 100%);
+  background: linear-gradient(0deg, rgba(53, 44, 101, 0.9) 40%, rgba(245, 189, 71, 0.7) 100%);
+}
+
+@mixin purple-orange-topbar($trnsp, $deg) {
+  background: -webkit-gradient($deg, rgba(94, 47, 110, $trnsp) 3%, rgba(245, 189, 71, $trnsp) 50%, rgba(245, 189, 71, $trnsp) 100%);
+  background: -moz-linear-gradient($deg, rgba(94, 47, 110, $trnsp) 3%, rgba(245, 189, 71, $trnsp) 50%, rgba(245, 189, 71, $trnsp) 100%);
+  background: linear-gradient($deg, rgba(94, 47, 110, $trnsp) 3%, rgba(245, 189, 71, $trnsp) 50%, rgba(245, 189, 71, $trnsp) 100%);
+}
+@mixin purple-orange-mobile-sidebar($trnsp, $deg) {
+  background: -webkit-gradient($deg, rgba(94, 47, 110, $trnsp) 3%, rgba(94, 47, 110, $trnsp) 40%, rgba(245, 189, 71, $trnsp) 100%);
+  background: -moz-linear-gradient($deg, rgba(94, 47, 110, $trnsp) 3%, rgba(94, 47, 110, $trnsp) 40%, rgba(245, 189, 71, $trnsp) 100%);
+  background: linear-gradient($deg, rgba(94, 47, 110, $trnsp) 3%, rgba(94, 47, 110, $trnsp) 40%, rgba(245, 189, 71, $trnsp) 100%);
+}
+@mixin purple-purple-btm-mobile-sidebar($deg) {
+  background: -webkit-gradient($deg, #4B3072 20%, #BB6393 100%);
+  background: -moz-linear-gradient($deg, #4B3072 20%, #BB6393 100%);
+  background: linear-gradient($deg, #4B3072 20%, #BB6393 100%);
+}
+@mixin purple-orange-topbar-v($trnsp, $deg) {
+  background: -webkit-gradient($deg, rgba(112, 61, 133, 0.99) 5%, rgba(245, 189, 71, $trnsp) 40%, rgba(245, 189, 71, $trnsp) 100%);
+  background: -moz-linear-gradient($deg, rgba(112, 61, 133, 0.99) 5%, rgba(245, 189, 71, $trnsp) 40%, rgba(245, 189, 71, $trnsp) 100%);
+  background: linear-gradient($deg, rgba(112, 61, 133, 0.99) 5%, rgba(245, 189, 71, $trnsp) 40%, rgba(245, 189, 71, $trnsp) 100%);
+}
+
+@mixin black-purple($deg) {
+  background: -webkit-gradient($deg, rgba(0, 0, 0, 0.9) -60%, rgba(105, 69, 121, 0.4) 60%);
+  background: -moz-linear-gradient($deg, rgba(0, 0, 0, 0.9) -60%, rgba(105, 69, 121, 0.4) 60%);
+  background: linear-gradient($deg, rgba(0, 0, 0, 0.9) -60%, rgba(105, 69, 121, 0.4) 60%);
+}
+
+@mixin corne-bar-gradient($color1,$color2,$color3) {
+  background: -webkit-gradient($deg-of-bg, $color1 30%, $color2 30.001%, $color2 53%, $color3 53.001%);
+  background: -moz-linear-gradient($deg-of-bg, $color1 30%, $color2 30.001%, $color2 53%, $color3 53.001%);
+  background: linear-gradient($deg-of-bg, $color1 30%, $color2 30.001%, $color2 53%, $color3 53.001%);
+}
+
+@mixin balance-gradient() {
+  background: -webkit-gradient(90deg, #84633A 0%, #CF8D5C 20%, #F5BD48 100%);
+  background: -moz-linear-gradient(90deg, #84633A 0%, #CF8D5C 20%, #F5BD48 100%);
+  background: linear-gradient(90deg, #84633A 0%, #CF8D5C 20%, #F5BD48 100%);
+}
+
+@mixin free-corne-bar-gradient($grad) {
+  background: -webkit-gradient($grad);
+  background: -moz-linear-gradient($grad);
+  background: linear-gradient($grad);
+}
+
+@mixin vertical-gradient($topCol,  $bottomCol) {
+  background: -webkit-gradient(180deg, $topCol, $bottomCol);
+  background: -moz-linear-gradient(180deg, $topCol, $bottomCol);
+  background: linear-gradient(180deg, $topCol, $bottomCol);
+}
+
+@mixin tips($textCol, $fontSZ, $lineH, $degBg, $grCol1,$grCol2,$grCol3, $titleH, $bg-deg: 0deg) {
+  width: 80%;
+  max-width: 180px;
+  height: $titleH;
+  @include purple-orange(0.9, $degBg);
+  margin: -$titleH auto 0;
+  padding: $btn-padding;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+  .content-tips {
+    border-radius: 0;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    color: $textCol;
+    font-size: $fontSZ;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: $lineH;
+  }
+}
+
+@mixin mobile-tips($textCol, $fontSZ, $lineH, $grCol1,$grCol2,$grCol3, $bg-deg: 0deg) {
+  width: calc(100% - 3%);
+  max-width: 160px;
+  height: 7vh;
+  @include purple-orange(0.6, $bg-deg);
+  margin: -7vh auto 0;
+  padding: $btn-padding;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  .content-tips {
+    border-radius: 0;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    color: $textCol;
+    font-size: $fontSZ;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: $lineH;
+  }
+}
+
+@mixin bg-radial($start-colour, $start-position, $end-colour, $end-position) {
+  background: -moz-radial-gradient(center, ellipse cover, $start-colour $start-position, $end-colour $end-position);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, Colour-stop($start-position, $start-colour), Colour-stop($end-position, $end-colour));
+  background: -webkit-radial-gradient(center, ellipse cover, $start-colour $start-position, $end-colour $end-position);
+  background: -o-radial-gradient(center, ellipse cover, $start-colour $start-position, $end-colour $end-position);
+  background: -ms-radial-gradient(center, ellipse cover, $start-colour $start-position, $end-colour $end-position);
+  background: radial-gradient(ellipse at center, $start-colour $start-position, $end-colour $end-position);
+}
+
+@mixin rectangle-btn($wBtn, $textCol, $textColA, $fontSZ, $lineH, $grCol1,$grCol2,$grCol3, $bgColor) {
+  width: $wBtn;
+  margin: 0;
+  @include button-bg();
+  padding: $btn-padding;
+  text-align: center;
+  border-radius: 16px;
+  position: relative;
+  display: block;
+  @include mix-boxshadow(1px, 0px, 10px, #000);
+
+  .content-btn {
+    border-radius: 0;
+    background: $bgColor;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: $textCol;
+    font-size: $fontSZ;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: $lineH;
+    &:hover {
+      background: $purple;
+    }
+  }
+  &.active {
+    .content-btn {
+      background: $purple;
+      //  background: $tips-black;
+      color: $textColA;
+    }
+  }
+}
+
+@mixin circle-btn($diametr, $textCol, $textColA, $fontSZ, $lineH, $grCol1,$grCol2,$grCol3) {
+  width: $diametr;
+  height: $diametr;
+  margin: 0;
+ // @include tips-gradient($grCol1, $grCol2, $grCol3);
+  padding: $btn-padding;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  .content-btn {
+    border-radius: 50%;
+    background: $rock;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: $grCol1;
+    font-size: $fontSZ;
+    text-align: center;
+    transform: none;
+    font-weight: 900;
+    line-height: $lineH;
+    &:hover {
+      background: $purple;
+    }
+
+  }
+  &.active {
+    .content-btn {
+      background: $purple;
+      color: $textColA;
+    }
+  }
+}
+
+@mixin img-btn($wPerc, $wMax) {
+  width: $wPerc;
+  max-width: $wMax;
+  padding: 0;
+  display: block;
+  img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@mixin mix-boxshadow( $top, $lef, $blur, $color, $ins:"") {
+  -webkit-box-shadow: $top $lef $blur $color #{$ins};
+  -moz-box-shadow: $top $lef $blur $color #{$ins};
+  box-shadow: $top $lef $blur $color #{$ins};
+}
+
+@mixin mix-boxshadow-ins( $top, $lef, $blur, $dist, $color) {
+  -webkit-box-shadow: $top $lef $blur $dist $color inset;
+  -moz-box-shadow: $top $lef $blur $dist $color inset;
+  box-shadow: $top $lef $blur $dist $color inset;
+}

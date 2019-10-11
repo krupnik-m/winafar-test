@@ -1,0 +1,94 @@
+@mixin basicFont($font-size-root) {
+  html {
+    font-size: $font-size-root;
+  }
+}
+/*
+@mixin paddingTipBtn($btn-padding) {
+  .play-tips, .book-tips, .btn-bet, .btn-vip {
+    padding: $btn-padding;
+  }
+}*/
+
+@mixin corne-bar-ratio($ratio) {
+
+  $btn-sml: $btn-sml * $ratio;
+
+  $diametr-corne-bar: $diametr-corne-bar * $ratio;
+
+  $cb-btn-size: #{(0 - $diametr-corne-bar * 0.1)};
+
+  $cb-left: #{(0 - $diametr-corne-bar * 0.11)};
+  $cb-bottom: #{(0 - $diametr-corne-bar * 0.372)};
+
+  $container-size: 200px;
+  $element-size: 50px;
+
+  .app-corne-bar {
+    width: $diametr-corne-bar;
+    height: $diametr-corne-bar;
+  }
+
+  .arounds-btn {
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    width: $diametr-corne-bar;
+    height: $diametr-corne-bar;
+    z-index: 201;
+    transform: rotate(130deg);
+    opacity: 0;
+  }
+
+  .child-btn {
+    // border: 1px solid grey;
+    width: $diametr-corne-bar * 1.7;
+    height: $btn-sml;
+    border-radius: $element-size;
+    position: absolute;
+    left: 50%;
+    top: 63%;
+    @include transform-origin(50%, + #{$element-size} / 2 - #{$container-size} / 2);
+    text-align: left;
+    a {
+      width: $btn-sml;
+      height: $btn-sml;
+      display: inline-block;
+      img {
+        width: 100%;
+        transition: all 0.2s;
+      }
+      :hover {
+        //   width: 110%;
+      }
+    }
+    &.big-btn {
+      width: $diametr-corne-bar * 1.74;
+      a {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  //Magic for child btns starts here
+  $i: 3; // count of buttons
+  @for $j from 1 through 3 {
+    .child-#{$j} {
+      color: green;
+      @include transform(translate(-50%, -100%) rotate(360deg * (($j + 2) / 10)));
+      img, .content-btn {
+        @include transform(rotate(0 - 28 - 360deg * (($j + 1) / 10)));
+      }
+    }
+  }
+
+}
+
+@mixin top-bar($ratio:1) {
+  $hght: 60px * $ratio;
+
+}

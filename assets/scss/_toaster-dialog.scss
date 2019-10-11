@@ -1,0 +1,50 @@
+#body {
+  #toast-container {
+    pointer-events: initial;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.1);
+
+    &.toast-top-center > div {
+      cursor: default;
+      margin-top: 9%;
+      width: 48%;
+      max-width: 1000px;
+      box-shadow: none !important;
+      padding: 4% 5%;
+      border: 1px solid $blue;
+      border-radius: 0;
+      color: #fff;
+      background: $black !important;
+     // @include er-dialog-bg();
+    }
+    .toast-title{
+      margin: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .toast-message{
+      display: block;
+      margin: 1rem 0 0;
+      p{
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        b{
+          font-size: 1.4rem;
+        }
+      }
+      button.btn-block {
+        width: 45%;
+        line-height: 2em;
+        font-size: 1.3rem;
+        border-radius: 0;
+        background: $blue;
+        margin: 0 auto;
+      }
+    }
+  }
+}

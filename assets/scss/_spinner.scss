@@ -1,0 +1,228 @@
+.progressline {
+  background-image: url("#{$img-path}loading_bar.png");
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+
+.loader {
+  color: #ffffff;
+  font-size: 10px;
+  margin: 0 auto;
+  position: relative;
+  text-indent: -9999em;
+  top: 68%;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+.splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  //background: url("#{$img-path}big-logo.png") 50% 40% no-repeat transparent;
+  background: url("#{$img-path}big-logo.png") 50% 50% no-repeat transparent;
+  background-size: 35%;
+}
+
+.stream-loading {
+  position: absolute;
+  display: block;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  background: url("#{$img-path}spiner.gif") center center no-repeat transparent;
+  background-size: contain;
+  z-index: 999;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("#{$img-path}spiner.gif") center center no-repeat rgba(56, 50, 99, 0.1);
+  z-index: 99999999;
+}
+.network-warning{
+  font-size: 2rem;
+  position: absolute;
+  bottom: 15%;
+  color: $gold-text;
+  text-align: center;
+  z-index: 0;
+  width: 100%;
+}
+.help-loading {
+  min-height: 50vh;
+  background: url("#{$img-path}spiner.gif") center center no-repeat rgba(56, 50, 99, 0.1);
+}
+
+.spin > .loading {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  position: inherit;
+}
+
+.disable-button.loading-button, .loading-button {
+  background: url("#{$img-path}spiner.gif") center center no-repeat rgba(56, 50, 99, 0.1) !important;
+  background-size: contain !important;
+  opacity: 1 !important;
+}
+
+.progressbar {
+  width: 35%;
+  display: block;
+
+  background-color: #000;
+
+  height: 3%;
+  margin: 42.5% auto 1.5%;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.progressline {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 13px;
+  margin-top: 0;
+  transition: all;
+  margin-left: -100%;
+  &.auto {
+    animation: progress-line 1.5s normal forwards ease-in-out;
+  }
+}
+
+p {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/*------------------------------------------------------------------------------
+clock Loader  / prefixfree
+---------------------------------------------------------------------------------*/
+.block-in .clock {
+  float: left
+}
+
+.clock {
+  width: 80px;
+  margin: 0 auto;
+  height: 80px;
+  border-radius: 100%;
+  background: linear-gradient(145deg, #fff 1%, #352C65 28.001%, #130836 37%, #130836 50%, #352C65 64.001%, #fff 99%);
+  border: 5px solid #fff;
+  position: relative;
+  box-shadow: 0 5px 0 0 rgba(0, 0, 0, .3), inset 0 5px 0 0 rgba(0, 0, 0, .3);
+}
+
+.clock:after {
+  content: "";
+  width: 5px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: inset 0px 2px 0 0 #fff,
+  inset 0px 30px 0 0 $gold;
+  animation: clock .5s linear infinite;
+}
+
+.clock:before {
+  content: "";
+  width: 5px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: inset 0px 2px 0 0 #fff, inset 0px 25px 0 0 $gold;
+  animation: clockb 6s linear infinite;
+}
+
+@keyframes clock {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes clockb {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes progress-line {
+  100% {
+    margin-left: 0%;
+  }
+}

@@ -1,0 +1,40 @@
+.w-150 {
+  width: 150px;
+}
+
+.w-30 {
+  width: calc(30% - 2px) !important;
+}
+
+.w-70 {
+  width: calc(70% - 2px) !important;
+}
+
+.w-50 {
+  width: calc(50% - 2px) !important;
+}
+
+.fl-l {
+  float: left;
+}
+
+.fl-r {
+  float: right;
+}
+
+.z-index1 {
+  z-index: 1 !important;
+}
+.display-none{
+  display: none !important;
+}
+.center-img{
+  display: block;
+  margin: 0 auto 10px;
+}
+.mb-0{
+  margin-bottom: 0 !important;
+}
+.text-orange {
+  color: $orange!important;
+}

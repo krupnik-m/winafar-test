@@ -1,0 +1,29 @@
+form.wnf{
+  input{
+    color: #fff;
+    text-align: center;
+    border: $frm-border solid $blue;
+    &.lg-input{
+      font-size: 3em;
+      line-height: 1.4em;
+      margin: 3% 0 0;
+      border: 1px solid $blue;
+      width: calc(100% - 10px);
+      padding: 5px 0;
+      height: auto;
+      &:focus{
+        border: 1px solid #fff !important;
+        -webkit-box-shadow: none;
+        box-shadow: none !important;
+      }
+    }
+    &:focus{
+      color: #fff !important;
+      border-bottom: $frm-border solid $frm-active-border-color !important;
+      border-color: $frm-active-border-color;
+    }
+  }
+}
+.form-help-text{
+  display: none;
+}

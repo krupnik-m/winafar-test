@@ -1,0 +1,73 @@
+@mixin keyframes( $name )
+{
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(show-buttons-around) {
+  0% {
+    transform: rotate(130deg);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-10deg);
+    opacity: 1;
+  }
+}
+
+@include keyframes (show-buttom-toolbar){
+  0% {
+    transform: translate(0,20vh);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@include keyframes (fade-in){
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes (show-tips){
+  0% {
+    transform: translate(0,-5vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+
+
+@include keyframes(blinked) {
+  0% {
+    box-shadow: 0 0 19px 8px #fff;
+
+  }
+  80% {
+    box-shadow: 0 0 5px 0px #fff;
+  }
+  100% {
+    box-shadow: 0 0 19px 8px #fff;
+
+  }
+}

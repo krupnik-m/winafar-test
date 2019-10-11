@@ -1,0 +1,134 @@
+#tutorial-box {
+  top: 0;
+  left: 25%;
+  min-width: 30% !important;
+  z-index: 1000;
+  background: $black;
+  padding: 20px 25px 10px;
+  border-radius: 0;
+  border: 1px solid $navy;
+  position: absolute;
+ // @include mix-boxshadow(0px, 0px, 10px, #fff);
+
+  &.top::before{
+    content: '';
+    position: absolute;
+    left: calc(50% - 20px);
+    top: -39px;
+    border: 20px solid transparent;
+    border-bottom: 20px solid $navy;
+  }
+  &.top::after{
+    content: '';
+    position: absolute;
+    left: calc(50% - 20px);
+    top: -37px;
+    border: 20px solid transparent;
+    border-bottom: 20px solid $black;
+  }
+
+  &.bottom::before{
+    content: '';
+    position: absolute;
+    left: calc(50% - 20px);
+    bottom: -39px;
+    border: 20px solid transparent;
+    border-top: 20px solid $navy;
+  }
+   &.bottom::after{
+    content: '';
+    position: absolute;
+    left: calc(50% - 20px);
+    bottom: -37px;
+    border: 20px solid transparent;
+     border-top: 20px solid $black;
+  }
+
+  &.left::before{
+    content: '';
+    position: absolute;
+    left: -39px;
+    top: calc(50% - 20px);
+    border: 20px solid transparent;
+    border-right: 20px solid $navy;
+  }
+  &.left::after{
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: calc(50% - 20px);
+    border: 20px solid transparent;
+    border-right: 20px solid $black;
+  }
+
+
+  &.right::before{
+    content: '';
+    position: absolute;
+    right: -39px;
+    top: calc(50% - 20px);
+    border: 20px solid transparent;
+    border-left: 20px solid $navy;
+  }
+  &.right::after{
+    content: '';
+    position: absolute;
+    right: -37px;
+    top: calc(50% - 20px);
+     border: 20px solid transparent;
+    border-left: 20px $black;
+  }
+
+
+  .content-tips {
+    border-radius: 0;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    font-size: 1.22rem;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.3em;
+  }
+  .footer-tips{
+    padding-top: 15px;
+    text-align: center;
+    a{
+      display: inline-block;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      color: $orange;
+      font-style: italic;
+      line-height: 13px;
+      margin: 10px auto 0;
+      width: 100%;
+      text-align: center;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .btn{
+      @include mix-boxshadow(1px, 0px, 3px, #000);
+      font-size: 1.2rem;
+      width: 45%;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      float: right;
+      &:active{
+        background: $purple;
+      }
+      &.fl-left{
+        float:left;
+      }
+    }
+  }
+}
+.point-element {
+  border: 1px solid #fff;
+  box-shadow: 0 0 19px 8px #fff;
+  animation: blinked 0.8s linear infinite !important;
+  animation-delay: 0s;
+  animation-fill-mode: both;
+}

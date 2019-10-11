@@ -1,0 +1,83 @@
+@include corne-bar-ratio($ratio: 1.1);
+@include top-bar($ratio: 1);
+
+@media screen and (max-width: 1400px) {
+  @include basicFont($font-size-root: 14px);
+  //@include paddingTipBtn($btn-padding: 5px);
+}
+
+@media screen and (max-width: 1300px) {
+  @include basicFont($font-size-root: 13px);
+  @include corne-bar-ratio($ratio: 1);
+}
+
+@media screen and (max-width: 1200px) {
+  @include basicFont($font-size-root: 12px);
+ @include top-bar($ratio: 0.9);
+}
+
+@media screen and (max-width: 1100px) {
+  @include basicFont($font-size-root: 11.5px);
+//  @include paddingTipBtn($btn-padding: 4px);
+  @include corne-bar-ratio($ratio: 0.9);
+}
+
+@media screen and (max-width: 1000px) {
+  @include basicFont($font-size-root: 11px);
+  @include top-bar($ratio: 0.8);
+}
+
+@media screen and (max-width: 900px) {
+  @include basicFont($font-size-root: 10.5px);
+ // @include paddingTipBtn($btn-padding: 3px);
+  @include corne-bar-ratio($ratio: 0.85);
+}
+
+@media screen and (max-width: 800px) {
+  @include basicFont($font-size-root: 10px);
+  @include top-bar($ratio: 0.7);
+}
+
+@media screen and (max-width: 700px) {
+  @include basicFont($font-size-root: 9.5px);
+  @include corne-bar-ratio($ratio: 0.8);
+}
+
+@media screen and (max-width: 650px) {
+  @include basicFont($font-size-root: 8.5px);
+  @include top-bar($ratio: 0.6);
+}
+/*
+@media screen and (max-width: 500px) {
+  @include basicFont($font-size-root: 8px);
+  @include paddingTipBtn($btn-padding: 2px);
+  @include corne-bar-ratio($ratio: 0.75);
+}
+
+@media screen and (max-width: 400px) {
+  @include basicFont($font-size-root: 7px);
+  @include corne-bar-ratio($ratio: 0.7);
+  @include top-bar($ratio: 0.55);
+}
+
+@media screen and (max-width: 300px) {
+  @include corne-bar-ratio($ratio: 0.65);
+  @include top-bar($ratio: 0.5);
+}
+*/
+/// simple media
+@media (max-width: 768px) {
+  .justify-content-md-center {
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+  .app-bottom-bar .btn-in-line {
+    width: 70%;
+    margin: 3.3% 0 0 25%;
+    text-align: right;
+  }
+  .app-bottom-bar .bottom-banner {
+    display: none
+  }
+}
